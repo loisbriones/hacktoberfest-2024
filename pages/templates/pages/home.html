@@ -65,80 +65,81 @@
     <h3>Personal Information Form</h3>
     <div class="form-container">
         <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            
-            <!-- User Information Section -->
-            <div class="form-section">
-                <div class="form-section-title">
-                    <i class="fas fa-user"></i> Personal Details
+            <form action="pages/templates/pages/portfolio.html" method="post">
+                    {% csrf_token %}
+                <!-- User Information Section -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <i class="fas fa-user"></i> Personal Details
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Name:</label>
+                        <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Description:</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="Tell us about yourself"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="nivel">Level:</label>
+                        <input type="text" class="form-control form-control-sm" id="nivel" name="nivel" placeholder="Your skill level or expertise">
+                    </div>
+                    <div class="form-group">
+                        <label for="imagen">Upload Image:</label>
+                        <input type="file" class="form-control-file" id="imagen" name="imagen">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="nombre">Name:</label>
-                    <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" placeholder="Enter your name">
+                
+                <!-- Skills & Languages Section -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <i class="fas fa-tools"></i> Skills & Languages
+                    </div>
+                    <div class="form-group">
+                        <label for="listHabilidad">Skills:</label>
+                        <input type="text" class="form-control form-control-sm" id="listHabilidad" name="listHabilidad" placeholder="E.g., JavaScript, Python, Project Management">
+                    </div>
+                    <div class="form-group">
+                        <label for="listaLenguaje">Languages:</label>
+                        <input type="text" class="form-control form-control-sm" id="listaLenguaje" name="listaLenguaje" placeholder="E.g., Spanish, English, French">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="descripcion">Description:</label>
-                    <textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="Tell us about yourself"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="nivel">Level:</label>
-                    <input type="text" class="form-control form-control-sm" id="nivel" name="nivel" placeholder="Your skill level or expertise">
-                </div>
-                <div class="form-group">
-                    <label for="imagen">Upload Image:</label>
-                    <input type="file" class="form-control-file" id="imagen" name="imagen">
-                </div>
-            </div>
-            
-            <!-- Skills & Languages Section -->
-            <div class="form-section">
-                <div class="form-section-title">
-                    <i class="fas fa-tools"></i> Skills & Languages
-                </div>
-                <div class="form-group">
-                    <label for="listHabilidad">Skills:</label>
-                    <input type="text" class="form-control form-control-sm" id="listHabilidad" name="listHabilidad" placeholder="E.g., JavaScript, Python, Project Management">
-                </div>
-                <div class="form-group">
-                    <label for="listaLenguaje">Languages:</label>
-                    <input type="text" class="form-control form-control-sm" id="listaLenguaje" name="listaLenguaje" placeholder="E.g., Spanish, English, French">
-                </div>
-            </div>
 
-            <!-- Work & Social Media Section -->
-            <div class="form-section">
-                <div class="form-section-title">
-                    <i class="fas fa-briefcase"></i> Work & Social Media
+                <!-- Work & Social Media Section -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <i class="fas fa-briefcase"></i> Work & Social Media
+                    </div>
+                    <div class="form-group">
+                        <label for="listaTrabajo">Jobs:</label>
+                        <textarea class="form-control" id="listaTrabajo" name="listaTrabajo" rows="3" placeholder="Describe your work experiences"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="listaSocial">Social Media Links:</label>
+                        <textarea class="form-control" id="listaSocial" name="listaSocial" rows="2" placeholder="E.g., LinkedIn, Twitter"></textarea>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="listaTrabajo">Jobs:</label>
-                    <textarea class="form-control" id="listaTrabajo" name="listaTrabajo" rows="3" placeholder="Describe your work experiences"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="listaSocial">Social Media Links:</label>
-                    <textarea class="form-control" id="listaSocial" name="listaSocial" rows="2" placeholder="E.g., LinkedIn, Twitter"></textarea>
-                </div>
-            </div>
 
-            <!-- Projects & Experience Section -->
-            <div class="form-section">
-                <div class="form-section-title">
-                    <i class="fas fa-project-diagram"></i> Projects & Experience
+                <!-- Projects & Experience Section -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <i class="fas fa-project-diagram"></i> Projects & Experience
+                    </div>
+                    <div class="form-group">
+                        <label for="listaProyecto">Projects:</label>
+                        <textarea class="form-control" id="listaProyecto" name="listaProyecto" rows="3" placeholder="Describe your projects"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="listaExperiencia">Experience:</label>
+                        <textarea class="form-control" id="listaExperiencia" name="listaExperiencia" rows="3" placeholder="Add your professional experiences"></textarea>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="listaProyecto">Projects:</label>
-                    <textarea class="form-control" id="listaProyecto" name="listaProyecto" rows="3" placeholder="Describe your projects"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="listaExperiencia">Experience:</label>
-                    <textarea class="form-control" id="listaExperiencia" name="listaExperiencia" rows="3" placeholder="Add your professional experiences"></textarea>
-                </div>
-            </div>
 
-            <!-- Submit Button -->
-            <div class="text-center mt-4">
-                <button type="submit" class="btn btn-submit btn-lg">Submit <i class="fas fa-paper-plane"></i></button>
-            </div>
+                <!-- Submit Button -->
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-submit btn-lg">Submit <i class="fas fa-paper-plane"></i></button>
+                </div>
+            </form>
         </form>
     </div>
 

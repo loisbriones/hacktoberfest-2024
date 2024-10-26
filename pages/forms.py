@@ -1,6 +1,8 @@
 from django import forms
 from .models import Proyecto, Experiencia, Habilidad, Lenguaje, Social, Trabajo, Usuario
 
+
+
 class ProyectoForm(forms.ModelForm):
     class Meta:
         model = Proyecto

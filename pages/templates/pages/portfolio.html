@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 160px;
+            height: 160px;
+            border: 5px solid #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.05);
+        }
+
+        header h1 {
+            margin: 15px 0 10px;
+            font-size: 2.8em;
+            font-family: 'Playfair Display', serif;
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        section {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin: 30px 0;
+            padding: 30px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h2.section-title {
+            font-size: 2.2em;
+            color: #007acc;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007acc;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        td {
+            color: #555;
+        }
+
+        .content-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .content-item:hover {
+            background: #e3f2fd;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #fff;
+            font-size: 1.8em;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #d1ecff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #007acc;
+            color: #fff;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (min-width: 768px) {
+            header img {
+                width: 180px;
+                height: 180px;
+            }
+
+            .social-icons a {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="user_image_url.jpg" alt="Profile Image">
+        <h1>Nombre del Usuario</h1>
+        <p>Nivel: Profesional / Estudiante / Otro</p>
+        <p>Descripción breve sobre el usuario.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2 class="section-title">Habilidades</h2>
+            <div class="content-item">
+                <h3>Nombre de Habilidad</h3>
+                <p>Descripción breve de la habilidad.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Lenguajes</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lenguaje</th>
+                            <th>Experiencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Python</td>
+                            <td>5 años</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>3 años</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Experiencias</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Desarrollador Web</td>
+                            <td>Creación de sitios web responsivos y modernos.</td>
+                        </tr>
+                        <tr>
+                            <td>Analista de Datos</td>
+                            <td>Visualización y análisis de datos complejos.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Proyectos</h2>
+            <div class="content-item">
+                <h3>Nombre del Proyecto</h3>
+                <p>Descripción breve del proyecto.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 - Portfolio de Nombre del Usuario</p>
+    </footer>
+</body>
+</html>
